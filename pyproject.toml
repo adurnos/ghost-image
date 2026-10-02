@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling>=1.18.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ghost-photo"
+version = "1.0.0"
+description = "Local-first CLI to strip EXIF and add small pixel perturbations in an effort to improve visual privacy."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+keywords = ["exif", "metadata", "privacy", "image", "gps", "cli", "perturbation"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Security",
+]
+dependencies = [
+    "pillow>=10.0.0",
+    "pillow-heif>=0.15.0",
+    "numpy>=1.20.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/adurnos/ghost-image"
+Repository = "https://github.com/adurnos/ghost-image"
+Issues = "https://github.com/adurnos/ghost-image/issues"
+
+[project.scripts]
+gp = "gp.gp:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gp"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src/gp",
+    "/pyproject.toml",
+    "/README.md",
+    "/LICENSE",
+    "/CONTRIBUTING.md",
+]
