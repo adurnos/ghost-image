@@ -1,6 +1,6 @@
 # ghost-photo
 
-<!-- Add an asciinema demo when available. -->
+https://github.com/user-attachments/assets/c694bdcf-502f-4978-b9f1-3a8b1340f0aa
 
 A lightweight Python command-line utility built in an effort to improve visual privacy. ghost-photo removes embedded metadata (EXIF, GPS, camera profiles) and adds small pixel perturbations intended to minimize visible changes while attempting to make automated image matching harder. These changes do not guarantee invisibility or protection from AI recognition.
 
